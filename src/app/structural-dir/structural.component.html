@@ -1,0 +1,41 @@
+<!-- <p>structural works!</p> -->
+<h2>Structural Directive</h2>
+<ul>
+    <li>ngIf</li>
+    <li>ngFor</li>
+    <li>ngSwitch</li>
+</ul>
+
+<h3 class="ng">ngIf:</h3>
+<p *ngIf="condn" class="if">Hai Sneha!</p>
+<p *ngIf="display; else elseBlock" class="if">
+    If Block:)
+</p>
+
+<ng-template #elseBlock >
+    <p class="if">Else Block:(</p>
+</ng-template>
+
+<div *ngIf="condition; then ifBlock else elseBlock1"></div>
+<ng-template #ifBlock>
+    <h4 class="if">Logged in!</h4>
+</ng-template>
+
+<ng-template #elseBlock1>
+    <h4 class="if">Logged out?</h4>
+</ng-template>
+
+<h3 class="ng">ngSwitch:</h3>
+<div [ngSwitch]="color" class="switch">
+    <div *ngSwitchCase="'red'" [ngClass]="'red'">RED</div>
+    <div *ngSwitchCase="'blue'" [ngClass]="'blue'">BLUE</div>
+    <div *ngSwitchCase="'green'" [ngClass]="'green'">GREEN</div>
+    <div *ngSwitchCase="'violet'" [ngClass]="'violet'">YELLOW</div>
+
+
+</div>
+
+<h3 class="ng">ngFor:</h3>
+<div *ngFor="let car of cars" class="for">
+    <h4>{{car}}</h4>
+</div>

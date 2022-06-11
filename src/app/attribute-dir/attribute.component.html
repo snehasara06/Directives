@@ -1,0 +1,43 @@
+<!-- <p>attribute works!</p> -->
+<h2>Attribute Directive</h2>
+<ol>
+    <li>ngModel</li>
+    <li>ngClass</li>
+    <li>ngStyle</li>
+</ol>
+<h3 class="ng">ngModel:</h3>
+
+<form class="container">
+    
+    Name: <input [(ngModel)]="name" type="text" name="name">{{name}}
+
+</form>
+
+
+
+
+
+
+<h3 class="ng">ngClass:</h3>
+    <span [ngClass]="'colorClass'" class="class">Color Class</span>
+    <br />
+    <br />
+    <span [ngClass]="classZero" class="class">Class One</span>
+    <br />
+    <br />
+    <span [ngClass]="[classOne,classTwo]" class="class">Class Two</span>
+    <br />
+    <br />
+    <span [ngClass]="{'three':true,'four':true}" class="class">Expressions </span>
+
+
+
+<h3 class="ng">ngStyle:</h3>
+<!-- <p class="style">Style</p> -->
+<button [ngStyle]="{'color':'green','font-size.px':20}" class="style">Button 1</button>
+<br />
+<br />
+<button [ngStyle]="addStyle()" class="style">Button 2</button>
+<br />
+<br />
+<button [ngClass]="['btn-bold','btn-italic',' btn btn-primary']" class="style">Button 3</button>
